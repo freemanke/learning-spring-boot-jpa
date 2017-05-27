@@ -18,9 +18,12 @@ public class UserGroup implements Serializable {
 
     @Id
     @GeneratedValue
-    private  int id;
+    @Column(name = "id")
+    private int id;
 
-    private  User user;
+    @Column(name = "user_id")
+    private int userId;
 
-    private Group group;
+    @Column(name = "group_id")
+    private Integer groupId;
 }
