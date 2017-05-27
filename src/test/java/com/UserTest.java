@@ -1,6 +1,11 @@
 package com;
 
-import com.freemanke.UserGroupRepository;
+import com.freemanke.repository.GroupRepository;
+import com.freemanke.repository.UserGroupRepository;
+import com.freemanke.repository.UserRepository;
+import com.freemanke.entity.Group;
+import com.freemanke.entity.User;
+import com.freemanke.entity.UserGroup;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com;
+package com.freemanke.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,23 +7,23 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Builder
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "user_group")
-public class UserGroup implements Serializable {
+@Table(name = "groups")
+public class Group implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "id")
     private int id;
 
-    @Column(name = "user_id")
-    private int userId;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "group_id")
-    private Integer groupId;
+    @ManyToMany(mappedBy = "groups")
+    private List<User> users;
 }

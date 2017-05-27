@@ -1,4 +1,4 @@
-package com;
+package com.freemanke.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
